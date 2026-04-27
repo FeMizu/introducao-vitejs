@@ -4,7 +4,7 @@ import styles from './index.module.css';
 function Atividade01() {
     return (
         <>
-            <h1 style={sty}>Atividade 1</h1>
+            <h1 className={styles}>Atividade 1</h1>
             <p className='p_atv'>Componente básico para renderizar tela com React</p>
         </>
     )
