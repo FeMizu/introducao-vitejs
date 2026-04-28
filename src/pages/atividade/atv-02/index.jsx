@@ -1,11 +1,8 @@
 import { useState } from "react";
-
 import styles from './index.module.css';
 
 export default function Atividade02() {  
-
     const [num, setNum] = useState(100);
-
     function handleIncrementa () {
         setNum(num + 1);
     }

@@ -1,58 +1,6 @@
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 96vh;
-}
-
-.titulo {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.texto {
-    font-size: 2rem;
-    margin: 1rem 0 2rem 0;
-}
-
-.botoes {
-    display: flex;
-    gap: 1rem;
-}
-
-.botao {
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 0.6rem;
-    font-weight: bold;
-    padding: 0.8rem 1.2rem;
-    color: white;
-    cursor: pointer;
-}
-
-/*Botões Coloridos*/
-.cadastrar {
-    background-color: #28a745;
-}
-
-.editar {
-    background-color: #17a2b8;
-}
-
-.listar {
-    background-color: #fd7e14;
-}
-
-.excluir {
-    background-color: #dc3545;
-}
-
-.cancelar {
-    background-color: #6c757d;
-}
-
-
-.botao:hover {
-    opacity: 0.8;
+    text-align: center;
+    margin-top: 5rem;
 }

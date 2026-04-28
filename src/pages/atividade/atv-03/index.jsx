@@ -1,53 +1,21 @@
-import { useState } from "react";
-import styles from "./index.module.css";
+import { useState } from 'react';
+import Botao from './botao';
+import styles from './index.module.css';
 
-export default function Atividade03() {
-  const [acao, setAcao] = useState("Excluir");
+function Exemplo04() {
+    const [acao, setAcao] = useState('Nenhuma');
 
-  return (
-    <div className={styles.container}>
-      <h1 className={styles.titulo}>Atividade 3</h1>
+    return (
+        <div className={styles.container}>
+            <h1>Atividade 3 - Uso de componentes</h1>
 
-      <p className={styles.texto}>
-        Ação selecionada: <strong>{acao}</strong>
-      </p>
+            <h2 className=''>O valor atual é: {contador}</h2>
 
-      <div className={styles.botoes}>
-        <button
-          className={styles.cadastrar}
-          onClick={() => setAcao("Cadastrar")}
-        >
-          Cadastrar
-        </button>
-
-        <button
-          className={styles.editar}
-          onClick={() => setAcao("Editar")}
-        >
-          Editar
-        </button>
-
-        <button
-          className={styles.listar}
-          onClick={() => setAcao("Listar")}
-        >
-          Listar
-        </button>
-
-        <button
-          className={styles.excluir}
-          onClick={() => setAcao("Excluir")}
-        >
-          Excluir
-        </button>
-
-        <button
-          className={styles.cancelar}
-          onClick={() => setAcao("Nenhuma")}
-        >
-          Cancelar
-        </button>
-      </div>
-    </div>
-  );
+            {/* Passando funções e textos via Props para o componente Botao */}
+            <Botao texto="Diminuir -" aoClicar={decrementar} acao={'-'} />
+            <Botao texto="Aumentar +" aoClicar={incrementar} acao={'+'} />
+        </div>
+    );
 }
+
+export default Exemplo04;
