@@ -1,22 +1,53 @@
 import { useState } from "react";
+import styles from "./index.module.css";
 
-import styles from './index.module.css';
+export default function Atividade03() {
+  const [acao, setAcao] = useState("Excluir");
 
-export default function Atividade02() {  
+  return (
+    <div className={styles.container}>
+      <h1 className={styles.titulo}>Atividade 3</h1>
 
-    const [num, setNum] = useState(100);
+      <p className={styles.texto}>
+        Ação selecionada: <strong>{acao}</strong>
+      </p>
 
-    function handleIncrementa () {
-        setNum(num + 1);
-    }
+      <div className={styles.botoes}>
+        <button
+          className={styles.cadastrar}
+          onClick={() => setAcao("Cadastrar")}
+        >
+          Cadastrar
+        </button>
 
-    return (
-        <div className={styles.container}>
-            <label className={styles.texto}>{`Contador: ${num}`}</label>            
-            <label 
-                onClick={() => handleIncrementa()}
-                className={styles.botao}
-            >+1</label>
-        </div>
-    );
+        <button
+          className={styles.editar}
+          onClick={() => setAcao("Editar")}
+        >
+          Editar
+        </button>
+
+        <button
+          className={styles.listar}
+          onClick={() => setAcao("Listar")}
+        >
+          Listar
+        </button>
+
+        <button
+          className={styles.excluir}
+          onClick={() => setAcao("Excluir")}
+        >
+          Excluir
+        </button>
+
+        <button
+          className={styles.cancelar}
+          onClick={() => setAcao("Nenhuma")}
+        >
+          Cancelar
+        </button>
+      </div>
+    </div>
+  );
 }
